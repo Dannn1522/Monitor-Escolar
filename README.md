@@ -284,3 +284,41 @@ Ejemplo:
 
 El sistema permite analizar hábitos de estudio mediante el registro y análisis de sesiones académicas, ayudando a los estudiantes a mejorar su productividad y organización mediante recomendaciones automáticas y estadísticas de rendimiento.
 
+---
+
+# Identificación de Requerimientos
+
+## Requerimientos Funcionales
+
+**RF1:** El sistema debe permitir registrar sesiones de estudio con información como materia, fecha, duración y tipo de actividad.
+
+**RF2:** El sistema debe permitir registrar el nivel de concentración percibido en cada sesión.
+
+**RF3:** El sistema debe permitir clasificar el tipo de actividad realizada (lectura, ejercicios, repaso, investigación, entre otros).
+
+**RF4:** El sistema debe almacenar el nivel de dificultad del tema estudiado.
+
+**RF5:** El sistema debe calcular un índice de eficiencia de estudio basado en las variables registradas.
+
+**RF6:** El sistema debe generar análisis de productividad de las sesiones de estudio.
+
+**RF7:** El sistema debe permitir visualizar patrones de hábitos de estudio del usuario.
+
+**RF8:** El sistema debe realizar comparaciones entre variables (horario vs rendimiento, duración vs concentración, dificultad vs eficiencia, entre otras).
+
+**RF9:** El sistema debe generar recomendaciones basadas en los datos analizados.
+
+**RF10 (Opcional):** El sistema debe mostrar gráficos de evolución del rendimiento y productividad utilizando Python.
+
+## Requerimientos No Funcionales
+
+**RNF1:** La interfaz debe ser intuitiva y fácil de usar.
+
+**RNF2:** El sistema debe almacenar la información de manera persistente.
+
+**RNF3:** El tiempo de respuesta para generar análisis no debe superar los 3 segundos.
+
+**RNF4:** Los datos del usuario deben mantenerse protegidos y privados.
+
+**RNF5:** El sistema debe permitir exportar resultados en formatos comunes como CSV o PDF.
+
