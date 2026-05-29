@@ -1,20 +1,20 @@
-# Manual de Usuario
+# MANUAL DE USUARIO
 
-## Proyecto POO en Python – Analizador de Sesiones de Estudio
+## Sistema de Análisis de Hábitos y Productividad de Estudio
 
 ---
 
 # 1. Introducción
 
-Este proyecto fue desarrollado en Python utilizando Programación Orientada a Objetos (POO). El sistema permite registrar sesiones de estudio de un estudiante y calcular su nivel de productividad promedio.
+El Sistema de Análisis de Hábitos y Productividad de Estudio es una aplicación desarrollada en Python que permite registrar sesiones de estudio, analizar el rendimiento académico y generar recomendaciones personalizadas para mejorar los hábitos de aprendizaje.
 
-El programa está diseñado para:
+El sistema ayuda al estudiante a:
 
-* Registrar materias estudiadas.
-* Guardar duración de estudio.
-* Registrar nivel de concentración.
-* Calcular productividad.
-* Mostrar promedios de rendimiento.
+* Organizar sus materias.
+* Registrar sesiones de estudio.
+* Analizar productividad.
+* Medir tiempo efectivo de estudio.
+* Recibir recomendaciones académicas.
 
 ---
 
@@ -22,209 +22,265 @@ El programa está diseñado para:
 
 Para ejecutar el programa se necesita:
 
-* Python 3 instalado
-
-* Visual Studio Code
-
-* PyCharm
-
-* IDLE de Python
-
-* Sistema operativo:
-
-  * Windows
-  * Linux
-  * MacOS
+* Python 3 instalado.
+* PyCharm o cualquier editor compatible con Python.
 
 ---
 
 # 3. Ejecución del Programa
 
-## Paso 1: Abrir el archivo
+## Paso 1
+
+Abrir el proyecto en PyCharm.
+
+## Paso 2
 
 Abrir el archivo:
 
-```python
-Proyecto_POO.py
+```text
+main.py
+```
+
+## Paso 3
+
+Presionar el botón:
+
+```text
+Run ▶
 ```
 
 ---
 
-## Paso 2: Compilar
+# 4. Inicio de Sesión
 
-Presionar:
+Al iniciar el programa aparecerá:
 
-* Ejecutar el archivo desde VS Code.
-* O usar el comando:
-
-```python
-python Proyecto_POO.py
+```text
+========== GESTOR DE ESTUDIO ==========
+Ingresa tu nombre:
 ```
 
----
-
-## Paso 3: Ejecutar
-
-El programa abrirá una consola donde se mostrarán los resultados del análisis.
-
----
-
-# 4. Funcionamiento del Sistema
-
-El sistema está dividido en 3 clases principales:
-
-## 4.1 Clase SesionEstudio
-
-Esta clase almacena la información de cada sesión de estudio.
-
-### Datos registrados
-
-* Materia
-* Duración
-* Concentración
-
-### Ejemplo
-
-```python
-SesionEstudio s1("POO", 2, 8);
-```
-
-Significa:
-
-* Materia: POO
-* Duración: 2 horas
-* Concentración: 8/10
-
----
-
-## 4.2 Clase Estudiante
-
-Representa al estudiante y almacena sus sesiones.
-
-### Funciones principales
-
-* Guardar sesiones.
-* Llevar conteo de sesiones.
-
-### Ejemplo
-
-```python
-Estudiante e("Dani");
-```
-
----
-
-## 4.3 Clase Analizador
-
-Se encarga de calcular el promedio de productividad.
-
-### Fórmula utilizada
-
-La productividad se calcula así:
-
-```python
-productividad = duracion * concentracion
-```
-
-### Ejemplo
-
-```python
-2 * 8 = 16
-```
-
----
-
-# 5. Ejemplo Completo de Uso
-
-## Crear sesiones
-
-```python
-SesionEstudio s1("POO", 2, 8);
-SesionEstudio s2("Calculo", 3, 7);
-```
-
----
-
-## Crear estudiante
-
-```python
-Estudiante e("Dani");
-```
-
----
-
-## Agregar sesiones
-
-```python
-e.agregarSesion(s1);
-e.agregarSesion(s2);
-```
-
----
-
-## Calcular promedio
-
-```python
-Analizador a;
-cout << a.promedio(e);
-```
-
----
-
-# 6. Resultado Esperado
-
-El programa calculará:
-
-* Productividad de cada sesión.
-* Promedio total de productividad.
+El usuario debe escribir su nombre.
 
 Ejemplo:
 
-| Materia | Duración | Concentración | Productividad |
-| ------- | -------- | ------------- | ------------- |
-| POO     | 2        | 8             | 16            |
-| Cálculo | 3        | 7             | 21            |
+```text
+Ingresa tu nombre: Dani
+```
 
-Promedio:
+Luego el sistema mostrará:
 
-```python
-(16 + 21) / 2 = 18
+```text
+Hola Dani, bienvenido al sistema.
 ```
 
 ---
 
-# 7. Validaciones del Sistema
+# 5. Menú Principal
 
-El programa evita dividir entre cero mediante:
+El sistema cuenta con un menú interactivo:
 
-```python
-if (e.cantidad == 0)
+```text
+========== MENU ==========
+1. Registrar materias
+2. Registrar sesiones
+3. Ver analisis
+4. Ver recomendaciones
+5. Salir
 ```
 
-Esto evita errores cuando no existen sesiones registradas.
+---
+
+# 6. Registrar Materias
+
+## Opción 1
+
+Permite registrar las materias académicas.
+
+El sistema solicitará:
+
+```text
+Cuantas materias desea agregar:
+```
+
+El usuario debe ingresar un número.
+
+Ejemplo:
+
+```text
+2
+```
+
+Luego deberá escribir el nombre de cada materia.
+
+Ejemplo:
+
+```text
+Nombre de la materia #1: Matematicas
+Nombre de la materia #2: Programacion
+```
+
+Finalmente aparecerá:
+
+```text
+✅ Materia registrada correctamente.
+```
 
 ---
 
-# 8. Ventajas del Proyecto
+# 7. Registrar Sesiones de Estudio
 
-* Uso de Programación Orientada a Objetos.
-* Código organizado.
-* Fácil mantenimiento.
-* Fácil ampliación.
-* Permite análisis básico de productividad.
+## Opción 2
+
+Permite registrar sesiones de estudio.
+
+El sistema mostrará las materias registradas:
+
+```text
+1 - Matematicas
+2 - Programacion
+```
+
+Después solicitará:
+
+* Materia
+* Actividad
+* Fecha
+* Duración
+* Concentración
+
+Ejemplo:
+
+```text
+Seleccione materia: 1
+Actividad: Taller
+Fecha: 29/05/2026
+Duracion en minutos: 120
+Concentracion (1-10): 8
+```
+
+Al finalizar aparecerá:
+
+```text
+✅ Sesion registrada correctamente.
+```
 
 ---
 
-# 9. Conclusión
+# 8. Ver Análisis
 
-Este proyecto permite comprender conceptos fundamentales de Programación Orientada a Objetos en Python, incluyendo:
+## Opción 3
 
-* Clases
-* Objetos
-* Constructores
-* Métodos
-* Encapsulamiento
-* Arreglos de objetos
+Muestra estadísticas generales del estudiante.
 
-Además, muestra cómo analizar información académica mediante cálculos simples de productividad.
+El sistema presenta:
+
+* Promedio de productividad.
+* Tiempo total estudiado.
+* Tiempo efectivo.
+* Tiempo perdido.
+* Mejor sesión registrada.
+* Productividad por materia.
+
+Ejemplo:
+
+```text
+📊 PROMEDIO GENERAL: 640
+
+⏰ Tiempo total: 120
+
+🎯 Tiempo efectivo: 96
+
+💤 Tiempo perdido: 24
+```
+
+---
+
+# 9. Ver Recomendaciones
+
+## Opción 4
+
+El sistema genera recomendaciones automáticas según el rendimiento del estudiante.
+
+Ejemplos:
+
+```text
+📖 Intenta leer mas sobre los temas que se te dificultan.
+
+🎥 Ver videos educativos puede ayudarte a entender mejor los conceptos.
+
+📝 Realiza resumenes o mapas mentales para reforzar el aprendizaje.
+```
+
+También genera mensajes motivacionales:
+
+```text
+🌟 Cada esfuerzo que haces hoy te acerca mas a tus metas.
+```
+
+---
+
+# 10. Salir del Sistema
+
+## Opción 5
+
+Finaliza la ejecución del programa.
+
+Mensaje mostrado:
+
+```text
+👋 Gracias por usar el sistema.
+📚 Nunca dejes de aprender.
+```
+
+---
+
+# 11. Manejo de Excepciones
+
+El sistema implementa manejo de excepciones utilizando:
+
+```python
+try:
+except:
+```
+
+Esto evita que el programa se cierre cuando el usuario ingresa datos incorrectos.
+
+Ejemplo:
+
+```text
+❌ Debes ingresar un numero.
+```
+
+---
+
+# 12. Posibles Errores del Usuario
+
+| Error                               | Solución                   |
+| ----------------------------------- | -------------------------- |
+| Ingresar texto en vez de números    | Escribir un valor numérico |
+| Seleccionar una materia inexistente | Elegir una materia válida  |
+| Registrar sesiones sin materias     | Registrar materias primero |
+
+---
+
+# 13. Tecnologías Utilizadas
+
+* Python
+* Programación Orientada a Objetos (POO)
+* Manejo de excepciones
+* Consola interactiva
+
+---
+
+# 14. Autores
+
+* Alisson Paola Bonilla
+* Karen Daniela Suarez Suarez
+
+---
+
+# 15. Conclusión
+
+El sistema permite analizar hábitos de estudio mediante el registro y análisis de sesiones académicas, ayudando a los estudiantes a mejorar su productividad y organización mediante recomendaciones automáticas y estadísticas de rendimiento.
 
