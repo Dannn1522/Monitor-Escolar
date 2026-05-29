@@ -1,0 +1,17 @@
+# Identificación de Requerimientos
+## Requerimientos Funcionales
+● RF1: El sistema debe permitir registrar sesiones de estudio con información como materia, duración, fecha y hora.
+● RF2: Permitir registrar el nivel de concentración percibido en cada sesión ● RF3: Debe permitir clasificar el tipo de actividad realizada (lectura, ejercicios, repaso, etc.).
+● RF4: Debe almacenar el nivel de dificultad del tema estudiado.
+● RF5: Debe calcular un índice de eficiencia de estudio basado en variables registradas. ● RF6: Debe generar análisis de productividad de las sesiones de estudio. ● RF7: Permitir visualizar patrones de hábitos de estudio del usuario.
+● RF8: Debe realizar comparaciones entre variables (horario vs rendimiento, duración y concentración, etc.).
+● RF9: Debe generar recomendaciones basadas en los datos analizados.
+● RF10(OPCIONAL): Debe mostrar gráficos de evolución del rendimiento usando Python
+##Requerimientos no Funcionales
+● RNF1: El sistema debe ser fácil de usar
+● RNF2: Debe tener tiempos de respuesta rápidos al procesar datos
+● RNF3: La información del usuario debe almacenarse de forma segura. 
+● RNF4: Ser compatibles con computadores personales
+● RNF5: El código debe estar estructurado usando programación orientada a objetos
+● RNF6: El sistema debe ser escalable para futuras mejoras(Como app móvil o web)
+● RNF7: La interfaz debe ser clara y organizada
